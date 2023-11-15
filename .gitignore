@@ -1,0 +1,3 @@
+frontent/build*
+frontend/*.pro.user
+backend/node_modules/
