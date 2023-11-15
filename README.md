@@ -1,0 +1,1 @@
+CREATE TABLE car(id INT primary key auto_increment, branch VARCHAR(50), model VARCHAR(50));

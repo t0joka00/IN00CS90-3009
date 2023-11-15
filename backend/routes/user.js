@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const basicAuth = require('express-basic-auth');
 const user = require('../models/user_model');
+
+router.use(basicAuth({users:{'admin':'helloworld'}}));
+
 
 router.get('/:id?',
  function(request, response) {
