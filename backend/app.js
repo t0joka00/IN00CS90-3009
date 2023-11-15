@@ -7,6 +7,7 @@ var app = express();
 
 const helmet = require('helmet');
 const cors = require('cors');
+const userRouter = require('./routes/user');
 const bookRouter = require('./routes/book');
 
 app.use(logger('dev'));
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(helmet());
 app.use(cors());
+app.use('/user', userRouter);
 app.use('/book', bookRouter);
 
 module.exports = app;
